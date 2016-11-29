@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="EasyHome.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EasyHome"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="125,468,0,0" TextWrapping="Wrap" Text="Connection status" VerticalAlignment="Top"/>
+        <TextBlock Name="connectionStatus" FontSize="20" HorizontalAlignment="Left" Margin="195,518,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Button Content="Connect!" HorizontalAlignment="Left" Margin="40,206,0,0" VerticalAlignment="Top" Height="172" Width="329"/>
+        <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="97,39,0,0" TextWrapping="Wrap" Text="Easy Home Automation" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
