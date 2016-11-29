@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace api_tester
+namespace EasyHome
 {
     public class JsonAnswer
     {

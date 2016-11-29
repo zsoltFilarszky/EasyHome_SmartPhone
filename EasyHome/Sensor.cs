@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace api_tester
+namespace EasyHome
 {
     public class Sensor
     {
