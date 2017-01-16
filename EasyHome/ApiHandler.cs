@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using EasyHome;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -26,7 +27,7 @@ namespace EasyHome
         public async Task<List<Sensor>> GetSensorList()
         {
             HttpResponseMessage responeMessage = await _client.GetAsync(_apiEndpointsDictionary[Endpoints.ListSensors]);
-            string response = await responeMessage.Content.ReadAsStringAsync();
+            string response = await responeMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
             return JsonConvert.DeserializeObject<List<Sensor>>(response);
         }
 

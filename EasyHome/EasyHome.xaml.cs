@@ -22,19 +22,30 @@ namespace EasyHome
     /// </summary>
     public sealed partial class EasyHome : Page
     {
+        private string _ipAddress;
         public EasyHome()
         {
             this.InitializeComponent();
         }
 
-        /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.
-        /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            _ipAddress = e.Parameter as string;
+        }
 
+        private void MySensor_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MySensors), new ApiHandler(String.Format("http://{0}",_ipAddress)));
+        }
+
+        private void Statistics_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ReportingPage), new ApiHandler(String.Format("http://{0}", _ipAddress)));
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+           Application.Current.Exit();
         }
     }
 }

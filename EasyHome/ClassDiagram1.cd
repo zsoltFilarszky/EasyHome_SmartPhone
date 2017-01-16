@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EasyHome.ApiHandler">
+    <Position X="10.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAhCAGAAAACAgAAQAAAACAAAAAAAAAABAAA=</HashCode>
+      <FileName>ApiHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyHome.App" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIAAg=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyHome.ChangeSensorValuePage" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAAAAAAAAAAAAAAAAAAAQAAEAAAAAAAEAABAAAAAA=</HashCode>
+      <FileName>ChangeSensorValuePage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyHome.CreateSensorPage" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAgAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>CreateSensorPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyHome.EasyHome" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACQAAAAAAIAAAAAAAAQQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EasyHome.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyHome.JsonAnswer" Collapsed="true">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>JsonAnswer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyHome.MainPage" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyHome.MySensors" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAACAAAAAAQCAAAAAAgAAAAABAAAAAQ=</HashCode>
+      <FileName>MySensors.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyHome.PageParameterPayload" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageParameterPayload.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyHome.Sensor">
+    <Position X="7.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAEAAAAAAAQAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Sensor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyHome.SensorData">
+    <Position X="8.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAgAAAAAQA=</HashCode>
+      <FileName>SensorData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyHome.SensorDataPage" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AgAQAAAAAAAQAAAAAAAAAAQAAAAAgAAAAAgABAAAAAA=</HashCode>
+      <FileName>SensorDataPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="EasyHome.Changable" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EasyHome.Endpoints" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABQCAAAAAAAAAAQAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EasyHome.SIUnits" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAIIAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

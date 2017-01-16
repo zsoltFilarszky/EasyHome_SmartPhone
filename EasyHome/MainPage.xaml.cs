@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -12,6 +16,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Newtonsoft.Json;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
@@ -22,27 +27,42 @@ namespace EasyHome
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private string _serverIp;
+
         public MainPage()
         {
             this.InitializeComponent();
-
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
 
-        /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.
-        /// This parameter is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        private async void  MainPageOnLoad(object sender, RoutedEventArgs e)
         {
-            // TODO: Prepare page for display here.
+            connectionStatus.Foreground = new SolidColorBrush(Colors.DarkRed);
+            connectionStatus.Text = "Not Connected!";
 
-            // TODO: If your application contains multiple pages, ensure that you are
-            // handling the hardware Back button by registering for the
-            // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
-            // If you are using the NavigationHelper provided by some templates,
-            // this event is handled for you.
+            _serverIp = ipTextBox.Text;     
+            var pingResult = await PingWebserver();
+            if (pingResult == HttpStatusCode.OK)
+            {
+                connectionStatus.Foreground = new SolidColorBrush(Colors.Green);
+                connectionStatus.Text = "Connected";
+            }
+        }
+
+        private async Task<HttpStatusCode> PingWebserver()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                string fullUrlPath = String.Format("http://{0}/EasyAutomation/index.html", _serverIp);
+                HttpResponseMessage responeMessage = await client.GetAsync(fullUrlPath);
+                return responeMessage.StatusCode;
+            }
+        }
+
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(EasyHome),_serverIp);
         }
     }
 }

@@ -21,6 +21,11 @@ namespace EasyHome
             Type = type;
             Changeable = changeable;
         }
+
+        public override string ToString()
+        {
+            return "Id: " + Id + " Type: " + Type;
+        }
     }
 
 

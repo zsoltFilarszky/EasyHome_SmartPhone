@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="EasyHome.MySensors"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EasyHome"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Gray">
+
+    <Grid Name="_grid" >
+        <TextBlock  HorizontalAlignment="Left" Margin="135,28,0,0" TextWrapping="Wrap" Text="MY SENSORS" VerticalAlignment="Top" Height="35" Width="155" FontSize="25"/>
+        <ListView Name="_listbox" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="500" Margin="10,68,0,0" VerticalAlignment="Top" Width="380" ItemClick="SensorClick" IsItemClickEnabled="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="30" >
+                        <TextBlock FontWeight="Thin"  FontSize="25" Text="Id:   "  Margin="5" />
+                        <TextBlock FontWeight="Bold"  FontSize="25" Text="{Binding Id}" Margin="5" />
+                        <TextBlock FontWeight="Thin"  FontSize="25" Text="Type:    "  Margin="5" />
+                        <TextBlock FontWeight="Bold"  FontSize="25" TextWrapping="WrapWholeWords"  Text="{Binding Type}" Margin="5" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Content="Create sensor" HorizontalAlignment="Left" Margin="80,592,0,-9" VerticalAlignment="Top" Width="260" Click="CreateSensorOnClick"/>
+
+    </Grid>
+</Page>

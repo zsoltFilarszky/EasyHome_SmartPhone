@@ -20,4 +20,12 @@ namespace EasyHome
         GetlatestSensorData=4,
         ChangesensorValue=5
     }
+
+    public enum SIUnits
+    {
+        Celsius,
+        Motion,
+        Switch,
+        Other
+    }
 }
